@@ -11,9 +11,9 @@ if [ "$EVENT" = "kill" ]; then
 else
 
   if [ "$MVN_PROFILE" = "" ]; then
-      /opt/maven/bin/mvn clean package -Dmaven.test.skip=true
+      mvn clean package -Dmaven.test.skip=true
   else
-      /opt/maven/bin/mvn clean package -Dmaven.test.skip=true -P$MVN_PROFILE
+      mvn clean package -Dmaven.test.skip=true -P$MVN_PROFILE
   fi
 
 
